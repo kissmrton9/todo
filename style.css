@@ -1,0 +1,129 @@
+:root {
+    --come-in-duration: 0.6s;
+    --fade-in-duration: 1s;
+    --body-bg-up: rgb(243, 55, 22);
+    --body-bg-down: rgb(221, 21, 21);
+    --container-background: rgb(215, 226, 223);
+    --todo-background: rgb(110, 124, 131);
+    visibility: visible;
+}
+.container{
+    display: block;
+    margin: auto;
+    padding: 20px;
+    width: 70vw;
+    max-width: 500px;
+    background-color: var(--container-background);
+}
+p.date{
+    color: var(--body-bg-down);
+    text-align: left;
+}
+body{
+    background: linear-gradient(0deg, var(--body-bg-up), green, var(--body-bg-up));
+    text-align: center;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+h4{
+    text-align: left;
+}
+.chill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.chill{
+    height: 60vh;
+}
+div.add-new-todo{
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-buttons{
+    text-align: center;
+    display: block;
+}
+
+input.toggle-completed{
+ border: none;
+ font-weight: bold;
+}
+input[name="add"]{
+    border-radius: 4px;
+    color: #fff;
+    background-color: var(--todo-background);
+    font-size: larger;
+}
+input[name="new-todo"]{
+    width: 80%;
+    border-radius: 4px;
+    font-style: italic;
+    color: grey;
+}
+.todo{
+    background-color: var(--todo-background);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+div.todo.pending{
+    animation-name: come-in-from-right;
+    animation-duration: var(--come-in-duration);
+}
+.todo div{
+    display: flex;
+    align-items: center;
+    margin: 4px 4px;
+}
+.todo div.trash{
+    background-color: inherit;
+}
+img.chill{
+    width: 20vw;
+    min-width: 60px;
+    max-width: 140px;
+}
+img.trash{
+    width: 10vw;
+    max-width: 40px;
+    transform: translate(0%,0%);
+    height: auto;
+}
+.fadein{
+    animation-name: fade-in;
+    animation-duration: var(--fade-in-duration);
+}
+.completed .description {
+    text-decoration: line-through;
+}
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes come-in-from-right{
+    from{
+        transform: translateX(100vw);
+    }
+    to{
+        transform: rotateY(0deg);
+    }
+}
+.none{
+    display: none;
+}
+.hidden{
+    visibility: hidden;
+}

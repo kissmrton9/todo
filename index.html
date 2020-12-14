@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daily To-Do List Manager</title>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Daily To-Do list manager</h1>       
+        </header>
+        <div class="container">
+            <div class="date">
+                <div class="today"><p class="date">Today</p><p class="date">DD-MM-YY</p></div>
+            </div>
+            <div class="add-new-todo">
+                <input type="text" name="new-todo" value="Take the garbage out">
+                <input type="button" name="add" value="+">
+            </div>
+            <section class="todos">
+                <div class="pending">
+                    <header>
+                        <h4 class="number-of-pending-items">You have no pending items</h4>
+                    </header>
+                    <div class="todo-list pending">
+                        <div class="todo pending">
+                            <div>
+                                <input type="checkbox">
+                                <span class="description">don't you?</span>
+                            </div>
+                            <div class="trash">
+                                <img src="trash.png" alt="click here to delete this todo" class="trash hidden">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="completed">
+                    <header>
+                        <h4>Completed: 100%</h4>
+                    </header>
+                    <div class="todo-list completed">
+                        <div class="todo completed">
+                            <input type="checkbox" checked>
+                            <span class="description">Everything is done.</span>
+                        </div>
+                        <div class="todo completed">
+                            <input type="checkbox" checked>
+                            <span class="description">Until you don't turn JS on.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="chill none">
+                <img class="chill none" src="gift.jpg" alt="You deserve it!">
+                <h2 class="chill none">Time to chill! You have no todos</h2>
+            </div>
+            <footer>
+                <div class="footer-buttons">
+                    <input type="button" class="toggle-completed" value="Hide Completed">
+                    <input type="button" class="toggle-completed" value="Clear All">
+                </div>
+            </footer>
+        </div>
+    </main>
+    <script src="todo.js"></script>
+</body>
+</html>
